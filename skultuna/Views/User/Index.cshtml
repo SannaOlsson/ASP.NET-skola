@@ -1,0 +1,28 @@
+﻿ @model skultuna.Models.User
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="~/css/site.css">
+    </head>
+    <body>
+    <ul>
+  		<li><a href="~/Home/Index">Skultuna</a></li>
+  		<li><a href="~/Product/Index">Produkter</a></li>
+  		<li style="float:right"><a href="~/User/Index">Logga In</a></li>
+        <li style="float:right">@Html.ActionLink("Logga ut", "SignOut", "User")</li>
+        <li style="float:right"><a href="~/Admin/Index">Admin</a></li>
+	</ul>
+
+        <h2>Logga In</h2>
+        <h3>@ViewBag.Message</h3>
+        <p>Logga in</p>
+            @using (Html.BeginForm())
+            {
+                <div>Användarnamn</div>
+                <div>@Html.TextBoxFor(m => m.Username) </div>
+                <div>Lösenord</div>
+                <div>@Html.PasswordFor(m => m.Password)</div>
+                <input type="submit" value="Logga in" />
+            }
+    </body>
+</html>

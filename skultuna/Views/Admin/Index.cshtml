@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="~/css/site.css">
+    </head>
+    <body>
+    <ul>
+  		<li><a href="~/Home/Index">Skultuna</a></li>
+  		<li><a href="~/Product/Index">Produkter</a></li>
+  		<li style="float:right"><a href="~/User/Index">Logga In</a></li>
+        <li style="float:right">@Html.ActionLink("Logga ut", "SignOut", "User")</li>
+        <li style="float:right"><a href="~/Admin/Index">Admin</a></li>
+	</ul>
+
+       <p>Det här är en säker sida som man bara når om man är inloggad</p> <br />
+    </body>
+</html>

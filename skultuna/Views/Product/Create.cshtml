@@ -1,0 +1,30 @@
+﻿@model skultuna.Models.Product
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+    <title>Title of the document</title>
+</head>
+<body>
+    <ul>
+  		<li><a href="~/Home/Index">Skultuna</a></li>
+  		<li><a href="~/Product/Index">Produkter</a></li>
+  		<li style="float:right"><a href="~/User/Index">Logga In</a></li>
+        <li style="float:right">@Html.ActionLink("Logga ut", "SignOut", "User")</li>
+        <li style="float:right"><a href="~/Admin/Index">Admin</a></li>
+	</ul>
+
+    <form method="post">
+        Produkt namn <br />
+        @Html.EditorFor(m => Model.Name) <br />
+
+        Beskrivning <br />
+        @Html.EditorFor(m => Model.Description) <br />
+
+        Pris <br />
+        @Html.EditorFor(m => Model.Price) <br />
+
+        <input type="submit" value="Lägg till produkt" />
+    </form>
+</body>
+</html>
